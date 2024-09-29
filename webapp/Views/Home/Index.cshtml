@@ -1,0 +1,20 @@
+﻿@model webapp.Models.FibonacciModel
+
+@{
+    @ViewData["Title"];
+}
+
+<h2>Verificar Número na Sequência de Fibonacci</h2>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div>
+        <label asp-for="Numero">Digite um número:</label>
+        <input asp-for="Numero" />
+    </div>
+    <button type="submit">Verificar</button>
+</form>
+
+@if (ViewBag.Mensagem != null)
+{
+    <p>@ViewBag.Mensagem</p>
+}
